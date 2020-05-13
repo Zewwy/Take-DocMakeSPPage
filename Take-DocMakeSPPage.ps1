@@ -174,7 +174,7 @@ function ConnectToSPandValidatePaths()
     #Ask for the SharePoint Site which will be used to upload the images and create the page on
     GetSPSitePath
     #Try to connect to the SharePoint Site
-    Try{Connect-PnPOnline $URL}
+    Try{Connect-PnPOnline SPPath}
     Catch{Centeralize "Something went wrong connecting to the SharePoint Site... $?" "Red";exit}
     GetSPImageFolder
 }
